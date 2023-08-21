@@ -1,13 +1,10 @@
 import numpy as np
 
-n=1000
-set=np.random.randint(1,100,size=n)
+n = 1000
+set = np.random.randint(1, 100, size=n)
 
-div=0
-for i in range(n):
-    if (set[i]%7 == 0):
-        div+=1
+div = set % 7 == 0
+div_count = np.sum(div)
 
-print("prb of div =",div/n)
-print("prb of not div =",(n-div)/n)
-
+print("prb of div =", div_count / n)
+print("prb of not div =", (n - div_count) / n)
