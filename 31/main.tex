@@ -93,8 +93,8 @@ An integer is choosen between 0 and 100. what is the probability that it is \\
 Let $X$ be a random variable such that 
 \begin{align}
 	X = \begin{cases}
-		0 & n\%7 \neq 0\\
-		1 & n\%7 = 0\end{cases}
+		0 & n \not\equiv 0 \pmod{7}\\
+		1 & n \equiv 0 \pmod{7}\end{cases}
 \end{align}
 \begin{align}
 	\text{Hence, }\pr{X=1} &=\frac{14}{99} \\
