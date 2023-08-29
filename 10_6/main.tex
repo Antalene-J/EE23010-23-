@@ -182,26 +182,27 @@ four times that of John.\\
 \item If A = {John promoted or Gurpreet promoted}, find P (A).
 \end{enumerate}
 \solution
+Let X be a random variable such that 
 \begin{table}[h]\centering
 	\input{./tables/table.tex}
 \end{table}
 
 Given that,
 \begin{align}
-	\pr{E_2} &= 2 \times \pr{E_1}\\
-	\pr{E_3} &= 4 \times \pr{E_1}\\
-	\pr{E_4} &= \pr{E_1}
+	P_X(R) &= 2 \times P_X(J)\\
+	P_X(A) &= 4 \times P_X(J)\\
+	P_X(G) &= P_X(J)
 \end{align}
 Also,\\
-$$ \pr{E_1} + \pr{E_2} + \pr{E_3} + \pr{E_4} = 1 $$\\
-Hence, we get \begin{enumerate}
+$$ P_X(J) + P_X(R) + P_X(A) + P_X(G) = 1 $$\\
+Hence, we get PMF as follows\begin{enumerate}
 	\item
 	\begin{enumerate}
-		\item $\pr{E_1} = \frac{1}{8}$ \\
-		\item $\pr{E_2} = \frac{1}{4}$ \\
-		\item $\pr{E_3} = \frac{1}{2}$ \\
-		\item $\pr{E_4} = \frac{1}{8}$ \\
+		\item $P_X(J) = \frac{1}{8}$ \\
+		\item $P_X(R) = \frac{1}{4}$ \\
+		\item $P_X(A) = \frac{1}{2}$ \\
+		\item $P_X(G) = \frac{1}{8}$ \\
 	\end{enumerate}
-	\item $\pr{E_1 + E_4} = \frac{1}{4}$ 
+	\item $P_X(J+G) = \frac{1}{4}$ 
 \end{enumerate}
 \end{document}

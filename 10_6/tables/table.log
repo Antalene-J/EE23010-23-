@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.2)  27 AUG 2023 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.8.2)  29 AUG 2023 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -107,7 +107,7 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count269
 \l__pdf_internal_box=\box57
 )
-No file table.aux.
+(./table.aux)
 \openout1 = `table.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
@@ -124,6 +124,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
 LaTeX Font Info:    ... okay on input line 68.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count270
@@ -143,31 +144,30 @@ LaTeX Font Info:    ... okay on input line 68.
 \gnumericMultiRowLength=\skip63
 \gnumericColA=\skip64
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 147.
+(Font)              <12> on input line 148.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 147.
+(Font)              <8> on input line 148.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 147.
+(Font)              <6> on input line 148.
 \gnumericColB=\skip65
+\gnumericColC=\skip66
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./table.aux) ) 
 Here is how much of TeX's memory you used:
- 1501 strings out of 478287
- 24439 string characters out of 5849290
- 313747 words of memory out of 5000000
- 19728 multiletter control sequences out of 15000+600000
+ 1504 strings out of 478287
+ 24471 string characters out of 5849290
+ 315769 words of memory out of 5000000
+ 19729 multiletter control sequences out of 15000+600000
  471995 words of font info for 37 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,8n,47p,203b,164s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,12n,47p,203b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-Output written on table.pdf (1 page, 30314 bytes).
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
+Output written on table.pdf (1 page, 14126 bytes).
 PDF statistics:
- 23 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 13 PDF objects out of 1000 (max. 8388607)
+ 7 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
