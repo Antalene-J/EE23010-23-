@@ -1,4 +1,7 @@
-\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[article]{IEEEtran}
+       \def\inputGnumericTable{}                                 %%
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
 \usepackage{algorithmic}
@@ -13,8 +16,78 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
-\usepackage{float}
+%
+%\usepackage{setspace}
+%\usepackage{gensymb}
+%\doublespacing
+%\singlespacing
 
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{relsize}
+%\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+%\usepackage{amsthm}
+%\usepackage{iithtlc}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{bm}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{xtab}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{enumitem}
+%\usepackage{mathtools}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{verbatim}
+%\usepackage{tfrupee}
+%\usepackage{stmaryrd}
+%\usetkzobj{all}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+ %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+%\usepackage{multicol}
+%\usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
 
 \begin{document}
 \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
@@ -82,23 +155,34 @@
 \let\vec\mathbf
 
 \bibliographystyle{IEEEtran}
-
+\title{
+%	\logo{
+Assignment
+%	}
+}
+\author{ Antalene (EE22BTECH11008)}
+\maketitle
 
 \vspace{3cm}
-Question 10.13.3.31\\
-An integer is choosen between 0 and 100. what is the probability that it is \\
-(a) divisible by 7  (b) not divisible by 7
-
+Question 11.16.3.31\\
+The probability that a student will pass his examination is 0.73, the probability of
+the student getting a compartment is 0.13, and the probability that the student will
+either pass or get compartment is 0.96. State True or False.\\
 \solution
-Let $X$ be a random variable such that 
+\begin{table}[h]
+	\centering
+	\input{./tables/table.tex}
+	\caption{Random variable declaration.}
+        \label{tab:exemplar/11/16/3/31}
+\end{table}
+\\Given,
 \begin{align}
-	X = \begin{cases}
-		0 & n \not\equiv 0 \pmod{7}\\
-		1 & n \equiv 0 \pmod{7}\end{cases}
+	\pr{X = 1} = 0.73 \\
+	\pr{Y = 1} = 0.13
 \end{align}
+Also,
 \begin{align}
-	\text{Hence, }\pr{X=1} &=\frac{14}{99} \\
-	\pr{X=0} &= 1 - \pr{X=1}\\
-	&= \frac{85}{99}
+	\pr{X = 1 + Y = 1} = 0.86
 \end{align}
+Hence, The statement is False
 \end{document}
