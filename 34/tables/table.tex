@@ -125,7 +125,7 @@
 \setlength\gnumericTableWidth{%
 	53pt+%
 	53pt+%
-	108pt+%
+	136pt+%
 0pt}
 \def\gumericNumCols{3}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
@@ -147,7 +147,7 @@
 
 \ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{108pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{136pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{tabular}[c]{%
 	b{\gnumericColA}%
@@ -199,26 +199,10 @@
 	 \multicolumn{1}{|p{\gnumericColA}|}%
 	{\setlength{\gnumericMultiRowLength}{0pt}%
 	 \addtolength{\gnumericMultiRowLength}{\gnumericColA}%
-	 \multirow{5}[2]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
+	 \multirow{3}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
 	 \gnumericPB{\centering}\gnumbox{X}}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
 	{\gnumericPB{\centering}\gnumbox{0}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Rs. 0}}
-\\
-\hhline{~|--|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{1}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\centering}\gnumbox{Rs. 1000 }}
-\\
-\hhline{~|--|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{2}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
 	{\gnumericPB{\centering}\gnumbox{Rs. 100}}
 \\
@@ -226,7 +210,7 @@
 	 \multicolumn{1}{|p{\gnumericColA}|}%
 	{}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{3}}
+	{\gnumericPB{\centering}\gnumbox{1}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
 	{\gnumericPB{\centering}\gnumbox{Rs. 50}}
 \\
@@ -234,9 +218,28 @@
 	 \multicolumn{1}{|p{\gnumericColA}|}%
 	{}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\centering}\gnumbox{4}}
+	{\gnumericPB{\centering}\gnumbox{2}}
 	&\multicolumn{1}{p{\gnumericColC}|}%
 	{\gnumericPB{\centering}\gnumbox{Rs. 10}}
+\\
+\hhline{|---|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\setlength{\gnumericMultiRowLength}{0pt}%
+	 \addtolength{\gnumericMultiRowLength}{\gnumericColA}%
+	 \multirow{2}[1]{\gnumericMultiRowLength}{\parbox{\gnumericMultiRowLength}{%
+	 \gnumericPB{\centering}\gnumbox{Y}}}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{0}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}\gnumbox{Doesnt have cash prize}}
+\\
+\hhline{~|--|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{1}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}\gnumbox{has a cash prize}}
 \\
 \hhline{|-|-|-|}
 \end{tabular}
