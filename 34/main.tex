@@ -177,27 +177,18 @@ contains no cash prize?\\
 	\caption{Random variable declaration.}
         \label{tab:exemplar/10/13/3/34}
 \end{table}
-\\Conditional probability are
-\begin{align}
-	\begin{cases}
-		\pr{Y = 1 | X = 0} = 1 \\
-		\pr{Y = 1 | X = 1} = 1 \\
-		\pr{Y = 1 | X = 2} = 1
-	\end{cases}
-\end{align}
-Also.
+\\PMF is
 \begin{align}
 	p_X(k) = \begin{cases}
-		\frac{10}{1000} & k =0 \\
-		\frac{100}{1000} & k =1 \\
-		\frac{200}{1000} & k =2 
+		\frac{690}{1000} & k =0 \\
+		\frac{200}{1000} & k =1 \\
+		\frac{100}{1000} & k =2 \\
+		\frac{10}{1000} & k =3
 		\end{cases}
 \end{align}
-Hence, by using Bayes Theorem
+Hence,
 \begin{align}
-	p_Y(0) &= 1 - p_Y(1)
-	& = 1 - \pr{Y = 1 | X = 0}p_X(0) + \pr{Y = 1 | X = 1}p_X(1) + \pr{Y = 1 | X = 2}p_X(2) \\
-	& = 1 - \frac{31}{100} \\
-	& = \frac{69}{100} 
+	p_X(0) &= \frac{690}{1000} \\
+	&= \frac{69}{100}
 \end{align}
 \end{document}	
