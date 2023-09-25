@@ -20,13 +20,16 @@ print("Probability from Binomial: ",(binom.cdf(k,n,p)))
 sig = np.sqrt(n*p*(1-p))
 k = np.linspace(0,n,n+1)
 fig, ax = plt.subplots()
+#binomial
 xpoints = k
 ypoints = np.array(binom.pmf(k,n,p))
 ax.stem(xpoints, ypoints,linefmt='r-', markerfmt='ro', basefmt='k--')
-xpoints = np.linspace(-n,n,100*n)
+#gauss
+xpoints = np.arange(-2,n,0.01)
 ypoints = np.array(norm(n*p,sig).pdf(xpoints))
+#ypoints = norm.pdf(xpoints,(n*p),sig)
 ax.plot(xpoints, ypoints,'b')
-plt.legend(["Gaussian","Binomial"])
+plt.legend(["Binomial","Gaussian"])
 plt.xlabel("Number of Successes")
 plt.ylabel("Probability")
 plt.grid()

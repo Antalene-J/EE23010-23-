@@ -202,8 +202,14 @@ Normal-Distribution $f\brak{x}$
 \end{align}
 The Q-function from the Normal-Distribution
 \begin{align}
-	\qfunc{x} &= \pr{Z>x}\\
+	\pr{Z>x} &= \qfunc{x}\\
 	&= \int_{x}^{\infty} \frac{1}{\sqrt{2\pi}} \times e^{-\frac{x^2}{2}}
+\end{align}
+and for finding \pr{Z=\frac{X-\mu}{\sigma}} Using approximation,
+\begin{align}
+	\pr{Z=\frac{X-\mu}{\sigma}} &\approx \pr{\frac{X+0.5-\mu}{\sigma} < Z < \frac{X-0.5-\mu}{\sigma}}\\
+	&\approx \pr{Z<\frac{X+0.5-\mu}{\sigma}} - \pr{Z<\frac{X-0.5-\mu}{\sigma}}\\
+	&\approx \qfunc{\frac{X-0.5-\mu}{\sigma}} - \qfunc{\frac{X+0.5-\mu}{\sigma}}
 \end{align}
 \textbf{Binomial :}
 \begin{align}
@@ -220,7 +226,7 @@ CDF of X
 	\begin{enumerate}
 		\item By Gaussian,\\
 		\begin{align}
-			\pr{X = 0} &= \pr{Z > -0.5298}\\
+			\pr{X = 0} &= \qfunc{-0.5298}\\			
 			&\approx 0.6960 
 		\end{align}
 		\item By Binomial
@@ -233,7 +239,7 @@ CDF of X
 	\begin{enumerate}
 		\item By Gaussian,\\
 		\begin{align}
-			\pr{X \leq 1} &\approx \pr{Z > 1.53896}\\
+			\pr{X \leq 1} &\approx \qfunc{1.5896}\\
 			&\approx 0.9948
 		\end{align}
 		\item By Binomial
@@ -247,6 +253,7 @@ CDF of X
 		\item By Gaussian,\\
 		\begin{align}
 			\pr{X > 1} &= 1 - \pr{X \leq 1}\\
+			&= 1 -  \qfunc{1.5896}\\
 			&= 1 - 0.994\\
 			&= 0.006
 		\end{align}
@@ -262,6 +269,7 @@ CDF of X
 		\item By Gaussian,\\
 		\begin{align}
 			\pr{X \geq 1} &= 1 -\pr{X = 0}\\
+			&= 1 - \qfunc{-0.5298}\\
 			&= 1 - 0.6960\\
 			&= 0.304
 		\end{align}
