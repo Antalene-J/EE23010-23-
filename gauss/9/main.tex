@@ -1,6 +1,6 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[article]{IEEEtran}
+\documentclass[journal,11pt,onecolumn]{IEEEtran}
        \def\inputGnumericTable{}                                 %%
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -182,14 +182,33 @@ will fuse after 150 days of use.
 	\centering
 	\input{./tables/table.tex}
 	\caption{Random variable and Parameter}
-        \label{tab:gauss/9/3/9}
+        \label{tab:gauss/9/3/9/1}
 \end{table}
-\\Let $Y$ be gaussain variable and normal distribution at $X=x$
+let $Y$ be a gaussian Random variable
 \begin{align}
-	\pr{X \leq x} &= \qfunc{x}\\
-	&= F_Y\brak{x} \\
-	&= \int_{x}^{\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{(t-\mu)^2}{2\sigma^2}} dt\\
-	&= \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+	Y &\sim N\brak{\mu,\sigma}\\
+	&\sim N\brak{1.25,0.9375}
+\end{align}
+Due to continuity correction \pr{X=x} can be approximated using gaussian distribution as
+\begin{align}
+	p_Y\brak{x}&\approx\pr{x-0.5<Y<x+0.5}\\
+	&\approx\pr{Y<x+0.5}-\pr{Y<x-0.5}	\\
+	&\approx F_Y\brak{x+0.5}-F_Y\brak{x-0.5}
+\end{align}
+CDF of Y is defined as:
+\begin{align}
+	F_Y\brak{x}&=\pr{Y<x}\\
+	&=\pr{\frac{Y-\mu}{\sigma}<\frac{x-\mu}{\sigma}}\\
+	\implies \frac{Y-\mu}{\sigma} &\sim N\brak{0,1}\\
+	&=1-\pr{\frac{Y-\mu}{\sigma}>\frac{x-\mu}{\sigma}}\\
+	&=\begin{cases}
+		1-\qfunc{\frac{x-\mu}{\sigma}} & x \geq \mu\\
+		\qfunc{\frac{\mu -x}{\sigma}} & x < \mu 
+	\end{cases}
+\end{align}
+Then probability in terms of Q funtion is
+\begin{align}
+	\implies p_Y\brak{x}&\approx \qfunc{\frac{\brak{x-0.5}-\mu}{\sigma}}-\qfunc{\frac{\brak{x+0.5}-\mu}{\sigma}}
 \end{align}
 \textbf{Binomial :}
 \begin{align}
@@ -201,66 +220,13 @@ CDF of X
 	F_X\brak{k} &= \pr{X \leq k}\\
 	&= \sum_{i=0}^{k}\comb{10}{i}\brak{0.05}^i\brak{0.95}^{5-i}
 \end{align}
-\begin{enumerate}
-	\item none defective\\
-	\begin{enumerate}
-		\item By Gaussian,\\
-		\begin{align}
-			\pr{X = 0} &= \qfunc{-0.5298}\\			
-			&\approx 0.6960 
-		\end{align}
-		\item By Binomial
-		\begin{align}
-			\pr{X = 0} &= \comb{5}{0}\brak{0.05}^0\brak{0.95}^{5}\\
-			&= 0.773
-		\end{align}	
-	\end{enumerate}
-	\item not more than one defective\\
-	\begin{enumerate}
-		\item By Gaussian,\\
-		\begin{align}
-			\pr{X \leq 1} &\approx \qfunc{1.5896}\\
-			&\approx 0.9948
-		\end{align}
-		\item By Binomial
-		\begin{align}
-			\pr{X \leq 1} &= \sum_{k=0}^{1}\comb{5}{k}\brak{0.05}^k\brak{0.95}^{5-k}\\
-			&= 0.9774075
-		\end{align}
-	\end{enumerate}
-	\item more than one defective\\
-	\begin{enumerate}
-		\item By Gaussian,\\
-		\begin{align}
-			\pr{X > 1} &= 1 - \pr{X \leq 1}\\
-			&= 1 -  \qfunc{1.5896}\\
-			&= 1 - 0.994\\
-			&= 0.006
-		\end{align}
-		\item By Binomial
-		\begin{align}
-			\pr{X>1} &= 1 - \pr{X \leq 1}\\
-			&= 1 - 0.9774075\\
-			&= 0.0226
-		\end{align}	
-	\end{enumerate}
-	\item atleast one defective\\
-	\begin{enumerate}
-		\item By Gaussian,\\
-		\begin{align}
-			\pr{X \geq 1} &= 1 -\pr{X = 0}\\
-			&= 1 - \qfunc{-0.5298}\\
-			&= 1 - 0.6960\\
-			&= 0.304
-		\end{align}
-		\item By Binomial
-		\begin{align}
-			\pr{X \geq 1} &= 1 -\pr{X = 0}\\
-			&= 1 - 0.773\\
-			&= 0.227
-		\end{align}	
-	\end{enumerate}
-\end{enumerate}
+The solution \\
+\begin{table}[h]
+	\centering
+	\input{./tables/table1.tex}
+	\caption{Random variable and Parameter}
+        \label{tab:gauss/9/3/9/2}
+\end{table}
 The graph\\
 \begin{figure}[H]
 \includegraphics[width=\columnwidth]{./figs/bg.png}
