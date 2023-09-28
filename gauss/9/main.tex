@@ -178,48 +178,28 @@ will fuse after 150 days of use.
 \\
 \solution\\
 \textbf{Guassian :}\\
-Let $X$ be a binomial Random variable with parameters $n$ and $p$ such that
+\begin{table}[h]
+	\centering
+	\input{./tables/table.tex}
+	\caption{Random variable and Parameter}
+        \label{tab:gauss/9/3/9}
+\end{table}
+\\Let $Y$ be gaussain variable and normal distribution at $X=x$
 \begin{align}
-	n = 5\\
-	p = 0.05
-\end{align}
-The Mean and Varience of $X$ are
-\begin{align}
-	\mu &= n \times p\\
-	&= 0.25\\
-	\sigma^2 &= n\times p \times (1-p)\\
-	&= 0.2375
-\end{align}
-Let $Z$ be a random variable with $\mu = 0$ and $\sigma^2 = 1$
-\begin{align}
-	Z = \frac{X - \mu + 0.5}{\sigma}
-\end{align}
-0.5 is correctional term\\
-We can calculate the distribution of Z by assuming it be a set of discrete points on the
-Normal-Distribution $f\brak{x}$
-\begin{align}
-	f\brak{x} = \frac{1}{\sqrt{2\pi}} \times e^{-\frac{x^2}{2}}\\
-\end{align}
-The Q-function from the Normal-Distribution
-\begin{align}
-	\pr{Z>x} &= \qfunc{x}\\
-	&= \int_{x}^{\infty} \frac{1}{\sqrt{2\pi}} \times e^{-\frac{x^2}{2}}
-\end{align}
-and for finding \pr{Z=\frac{X-\mu}{\sigma}} Using approximation,
-\begin{align}
-	\pr{Z=\frac{X-\mu}{\sigma}} &\approx \pr{\frac{X+0.5-\mu}{\sigma} < Z < \frac{X-0.5-\mu}{\sigma}}\\
-	&\approx \pr{Z<\frac{X+0.5-\mu}{\sigma}} - \pr{Z<\frac{X-0.5-\mu}{\sigma}}\\
-	&\approx \qfunc{\frac{X-0.5-\mu}{\sigma}} - \qfunc{\frac{X+0.5-\mu}{\sigma}}
+	\pr{X \leq x} &= \qfunc{x}\\
+	&= F_Y\brak{x} \\
+	&= \int_{x}^{\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{(t-\mu)^2}{2\sigma^2}} dt\\
+	&= \frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
 \end{align}
 \textbf{Binomial :}
 \begin{align}
-	\pr{X=k}&=\comb{n}{k}p^k\brak{1-p}^{n-k}\\
-	&=\comb{5}{k}\brak{0.05}^k\brak{0.95}^{5-k}
+	\pr{X=k} &= \comb{n}{k}p^k\brak{1-p}^{n-k}\\
+	&= \comb{5}{k}\brak{0.05}^k\brak{0.95}^{5-k}
 \end{align}
 CDF of X
 \begin{align}
-	F_X\brak{k}&=\pr{X \leq k}\\
-	&=\sum_{i=0}^{k}\comb{10}{i}\brak{0.05}^i\brak{0.95}^{5-i}
+	F_X\brak{k} &= \pr{X \leq k}\\
+	&= \sum_{i=0}^{k}\comb{10}{i}\brak{0.05}^i\brak{0.95}^{5-i}
 \end{align}
 \begin{enumerate}
 	\item none defective\\
