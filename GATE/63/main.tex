@@ -1,6 +1,6 @@
 \let\negmedspace\undefined
 \let\negthickspace\undefined
-\documentclass[article]{IEEEtran}
+\documentclass[journal,11pt,onecolumn]{IEEEtran}
        \def\inputGnumericTable{}                                 %%
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts,amsthm}
@@ -171,6 +171,7 @@ white flowers. If two individual plants are randomly selected from a large
 segregating population of a genetic cross between RR and rr parents, the
 probability of both the plants producing red flowers is\\
 \solution
+\\Lets represent R as 1 and r as 0, 
 \\ For the parent genes:
 \begin{table}[h]
 	\centering
@@ -178,7 +179,7 @@ probability of both the plants producing red flowers is\\
 	\caption{Gene of Parents.}
         \label{tab:Gate XL 63/2023/1}
 \end{table}
-\\Hence, we can see that it gives only Rr gene
+\\Hence, we can see that it gives only Rr gene i.e.,10
 \\For the children genes:
 \begin{table}[h]
 	\centering
@@ -192,16 +193,29 @@ probability of both the plants producing red flowers is\\
 	\caption{Random varibale declaration}
         \label{tab:Gate XL 63/2023/3}
 \end{table}
+\begin{table}[h]
+	\centering
+	\input{./tables/t4.tex}
+	\caption{Binomial parameters declaration}
+        \label{tab:Gate XL 63/2023/4}
+\end{table}
 \begin{align}
-	\pr{X = k} &= \comb{2}{k} \left(\frac{1}{2}\right)^{k}  \left(\frac{1}{2}\right)^{2-k}\\
+	p_X(k) &= \comb{n}{k} p^k q^{n-k} 
+	\qquad \forall k = 0,1,2\\
+	&= \comb{2}{k} \left(\frac{1}{2}\right)^{k}  \left(\frac{1}{2}\right)^{2-k}\\
 	&= \comb{2}{k} \left(\frac{1}{2}\right)^{2}
 \end{align}
-\\we know that Red flower comes for RR and Rr
+\\we know that Red flower comes for RR and Rr i.e.,11 and 10
 \\Therefore,
 \begin{align}
 	\pr{X \leq 1} &= 1 - \pr{X = 2} \\
 	&= 1 - \frac{1}{4}\\ 
 	&= \frac{3}{4}
 \end{align}
-
+\begin{figure}[h]
+	\centering	
+	\includegraphics[width=\columnwidth]{./figs/graph.png}
+	\caption{Simulation vs Theoretical}
+	\label{fig:Gate XL 63/2023/5}
+\end{figure}
 \end{document}
